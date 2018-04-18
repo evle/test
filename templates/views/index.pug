@@ -1,0 +1,185 @@
+extends ../layouts/default
+  
+block content
+    main
+        .intro.row.justify-content-center.align-items-center
+            .col-6
+                p.desc 推诚相见 持之以恒                   
+                p.desc-sub 为各行业提供专业的信息化解决方案，软件外包开发服务
+            .col-4
+                img.img-fluid.intro-img(src="./img/intro.png", alt="")           
+        
+        .service.row.align-content-start.justify-content-center
+            .service-title.col-12.pt-5.bb-hr.main-wrap
+                span.sub-t 服务                     
+                span.sub-span  / SERVICE
+            .pl-5.col-sm-3.align-self-center.text-center
+                img.resize-s.img-fluid(src="./img/web.png", alt="")                 
+            .col-sm-4.align-self-center
+                #tab1.tab.active-tab.ml-5.pt-6.mr-5.re-s-desc(aria-labelledby="tab-link1")
+                    h4
+                        a.rm-under.a-clear.title-color.title-size(href="#") 网站系统                        
+                    h5.text-size.text-color Web site system                        
+                    p.text-size.text-color.mb-5.mt-4 网站建设是指使用标记语言（markup language)，通过一系列设计、建模、和执行的过程将 电子格式的信息通过互联网传输、最终以图形用户界面（GUI）的形式被用户所浏览...                    
+                    a.more.rm-under.hidden-sm(href="#") MORE
+                                  
+                #tab2.tab.ml-5.pt-6.mr-5.align-self-center.re-s-desc(aria-labelledby="tab-link2")
+                    h4
+                        a.rm-under.a-clear.title-color.title-size(href="#") 网站系统2                  
+                    h5.text-size.text-color Web site system
+                    p.text-size.text-color.mb-5.mt-4 网站建设是指使用标记语言（markup language)，通过一系列设计、建模、和执行的过程将 电子格式的信息通过互联网传输、最终以图形用户界面（GUI）的形式被用户所浏览...                      
+                    a.more.rm-under.hidden-sm(href="#") MORE
+                   
+                #tab3.tab.ml-5.pt-6.mr-5.align-self-center.re-s-desc(aria-labelledby="tab-link3")
+                    h4
+                        a.rm-under.a-clear.title-color.title-size(href="#") 网站系统3                       
+                    h5.text-size.text-color Web site system                  
+                    p.text-size.text-color.mb-5.mt-4 网站建设是指使用标记语言（markup language)，通过一系列设计、建模、和执行的过程将 电子格式的信息通过互联网传输、最终以图形用户界面（GUI）的形式被用户所浏览...                       
+                    a.more.rm-under.hidden-sm(href="#") MORE              
+            .mt-5.br-hr.align-self-center.hidden-sm
+                #myTab.br-hr.align-self-center.pt-5
+                    a.rm-under(href="#tab1")
+                        .active-shadow.col.title-color.title-size.pb-3.pt-4 网站系统
+                            p.text-size.text-color Web site system                    
+                    a.rm-under(href="#tab2")
+                        .col.title-color.title-size.pb-3.pt-4 网站系统2
+                            p.text-size.text-color Web site system                   
+                    a.rm-under(href="#tab3")
+                        .col.title-color.title-size.pb-3.pt-4 网站系统3
+                            p.text-size.text-color Web site system         
+        
+        //- SHOW CASE
+        .showcase.pt-5.row.align-content-start
+            //- Title
+            .main-wrap.col-12
+                span.sub-t 项目案例                
+                span.sub-span  / PROJECT          
+            //- Mobile View
+            .col-12.flex-wrap.main-wrap.h-75.align-items-center.pt-5.d-block.d-sm-none
+                .row
+                    .col.pt-5.pb-5.holder-img.bt.bl.bt
+                        img.img-fluid(src="./img/eg.png", alt="")                          
+                    .col.pt-5.pb-5.holder-img.bt.bl.br
+                        img.img-fluid(src="./img/eg.png", alt="")                   
+                .row
+                    a.holder-img.sm-service.title-color.col.pt-3.text-center.pb-3.rm-under.bl(href="#")  医疗自助机 01                            
+                    a.holder-img.sm-service.title-color.col.pt-3.text-center.pb-3.rm-under.br.bl(href="#")  医疗自助机 01                   
+                .row
+                    .col.pt-5.pb-5.holder-img.bl.bt
+                        img.img-fluid(src="./img/eg.png", alt="")                            
+                    .col.pt-5.pb-5.holder-img.bl.br.bt
+                        img.img-fluid(src="./img/eg.png", alt="")
+                .row
+                    a.holder-img.title-color.sm-service.col.pt-3.text-center.pb-3.rm-under.bl.bb(href="#")  医疗自助机 01                          
+                    a.holder-img.title-color.sm-service.col.pt-3.text-center.pb-3.rm-under.bl.br.bb(href="#")  医疗自助机 01              
+            
+            //- Cases
+            .col-12.flex-wrap.main-wrap.h-75.align-items-center.pt-6.hidden-sm
+                .row.mt-5
+                    .col-4                      
+                    .square.col                     
+                    .square.col.text-center.pt-4.s-color.text-size.animated.case3
+                        span.h5 03
+                        |                             
+                        br
+                        |  |
+                        |                             
+                        br
+                        | 学校班牌系统
+                    .square.col.holder-img.case3.animated
+                        img(src="./img/eg.png", width="160px", height="100px", alt="")
+                                
+                .row
+                    .col-4.holder-img.case2.animated
+                        img(src="./img/eg.png", width="240px", height="130px", alt="")                       
+                    .square.col.text-center.pt-4.s-color.text-size.case2.animated
+                        span.h5 02
+                        |                             
+                        br
+                        |  |
+                        |                             
+                        br
+                        | 学校班牌系统
+                        |                         
+                    .square.col.holder-img.case4.animated
+                        img(src="./img/eg.png", width="160px", height="100px", alt="")           
+                    .square.col.text-center.pt-4.s-color.text-size.case4.animated
+                        span.h5 04
+                        |                             
+                        br
+                        |  |
+                        |                             
+                        br
+                        |  学校班牌系统
+                                  
+                .row
+                    .col-4.pt-3.case1.animated
+                        h4.title-color.title-size
+                            span.text-color.h5 01 —
+                            | 医疗自助机                        
+                        p.text-size.text-color HLST-HA01A医疗自助终端机是一款为医院等机构量身定做的可打印病历本                      
+                    .col.square.holder-img.case1.animated
+                        img(src="./img/eg.png", width="160px", height="100px", alt="")                      
+                    .col.square                      
+                    .col.square
+
+        //- NEWS             
+        .news.pt-5.row.align-content-start
+            //- Title
+            .col-12.main-wrap.re-pb-4
+                span.sub-t 资讯中心                   
+                span.sub-span  / NEWS    
+                //- More          
+                .col-12.pt-5.text-right.hidden-sm
+                    a(href='/article/')
+                        span.text-color.fa.fa-plus.text-hover      
+            //- List    
+            .row.h-75.main-wrap.ml-5.pl-5.justify-content-center
+                .col-sm-3.h5.title-color.hidden-sm.align-self-end #{data.posts.results[0]._.publishedDate.format('MM-DD')}
+                .col-sm-3.h5.title-color.hidden-sm.align-self-end #{data.posts.results[1]._.publishedDate.format('MM-DD')}
+                .col-sm-3.h5.title-color.hidden-sm.align-self-end #{data.posts.results[2]._.publishedDate.format('MM-DD')}                 
+                //- Middle
+                .col-12.hidden-sm
+                    .row.circles.justify-content-center.align-middle
+                        span.col-sm-3.fa.fa-eercast.text-hover.c-size                     
+                        span.col-sm-3.fa.fa-eercast.text-hover.c-size
+                        span.col-sm-3.fa.fa-eercast.text-hover.c-size             
+                    hr.mr-5
+                //- Content                    
+                .col-sm-3.re-news.h-50
+                    h2: a.rm-under.text-hover.title-size.title-color(href="/article/post/" + data.posts.results[0].slug) #{data.posts.results[0].title}                         
+                    p.title-color.title-size.d-block.d-sm-none #{data.posts.results[0]._.publishedDate.format('MM-DD')}                      
+                    .text-color.text-size!= data.posts.results[0].content.brief 
+                    hr.d-block.d-sm-none
+                                
+                .col-sm-3.re-news.h-50
+                    h2: a.rm-under.text-hover.title-size.title-color(href="/article/post/" + data.posts.results[1].slug) #{data.posts.results[1].title}                       
+                    p.title-color.title-size.d-block.d-sm-none #{data.posts.results[1]._.publishedDate.format('MM-DD')}                     
+                    .text-color.text-size!= data.posts.results[1].content.brief                 
+                    hr.d-block.d-sm-none   
+
+                .col-sm-3.re-news.h-50
+                    h2: a.rm-under.text-hover.title-color.title-size(href="/article/post/" + data.posts.results[2].slug) #{data.posts.results[2].title}                     
+                    p.title-color.title-size.d-block.d-sm-none #{data.posts.results[2]._.publishedDate.format('MM-DD')}                        
+                    .text-color.text-size!= data.posts.results[2].content.brief               
+                    hr.d-block.d-sm-none
+
+        //- Contact    
+        .contact.pt-5.row.justify-content-end
+            .col-12.main-wrap
+                span.sub-t 联系我们                 
+                span.sub-span  / CONTACT                
+            .social.col-sm-4
+                .title-color.mb-3.hidden-sm 关注
+                a.rm-under.mr-3(href="#")
+                    img.img-fluid(src="./img/qq.png", onmouseover="this.src='./img/qq-active.png'", onmouseout="this.src='./img/qq.png'", alt="")                    
+                a.rm-under.mr-3(href="#")
+                    img.img-fluid(src="./img/wechat.png", onmouseover="this.src='./img/wechat-active.png'", onmouseout="this.src='./img/wechat.png'", alt="")                 
+                a.rm-under.mr-3(href="#")
+                    img.img-fluid(src="./img/sina.png", onmouseover="this.src='./img/sina-active.png'", onmouseout="this.src='./img/sina.png'", alt="")                 
+            .col-sm-4.address
+                .title-color.pb-3 众联云海建站系统                  
+                p.text-color.text-size 地址: 高新区香年广场T3栋804号               
+                p.text-color.text-size 电话: 135-4111-8666                   
+                p.text-color.text-size 邮箱: 251984220@qq.com                    
+                p.text-color.text-size 邮编: 6102543

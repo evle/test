@@ -1,0 +1,40 @@
+extends ../layouts/default
+
+mixin project(project)
+	.proj(data-ks-editable=editable(user, { list: 'Project', id: project.id}))
+		img(src=project._.image.fit(250,280), alt="" class="img-fluid mb-2")
+		h5: a(href='/showcase/project/' + project.slug, class="title-color title-size rm-under text-hover")=project.title
+		if project.categories && project.categories.length
+			//- each cat, i in project.categories
+			//- 	p: a(href=`/showcase/${cat.key}` class="text-size text-color rm-under")= cat.name
+			
+block content
+	.mt-5.mb-4.text-center
+		h4.page-title.pt-2 出品
+		h5.page-sbtitle Projects
+		.d-flex.mt-4
+			ul.list-inline.mx-auto.justify-content-center
+				li.list-inline-item.mb-4
+					a(href="/showcase" class=!data.category ? 'active' : false).tag.rm-under.mr-1 全部
+				if data.categories.length
+					each cat in data.categories
+						li.list-inline-item.mb-4
+							a(href='/showcase/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).tag.rm-under.mr-1= cat.name
+		hr
+	.d-flex.main-wrap.flex-wrap
+		each project in data.projects.results
+			+project(project)
+		
+	if data.projects.totalPages > 1
+		ul.pagination.offset-1
+			if data.projects.previous
+				li: a(href='?page=' + data.projects.previous): i.fa.fa-angle-left
+			else
+				li.disabled: a(href='?page=' + 1): i.fa.fa-angle-left
+			each p, i in data.projects.pages
+				li(class=data.projects.currentPage == p ? 'active' : null)
+					a(href='?projects=' + (p == '...' ? (i ? data.projects.totalPages : 1) : p ))= p
+			if data.projects.next
+				li: a(href='?page=' + data.projects.next): i.fa.fa-angle-right
+			else
+				li.disabled: a(href='?page=' + data.projects.totalPages): i.fa.fa-angle-right

@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block content
+	.row.justify-content-center.pb-5.mb-5.mt-5.main-wrap
+		.text-center
+			//- h1.ti.title-color= data.project.title
+			.bc.mb-4.item.pr-2    项目说明
+			.text-color.text-size.lh!= data.project.content.brief
+			hr
+			.bc.title-size.item.mt-5.mb-5    项目欣赏
+			!= data.project.content.extended
+			hr.mt-5
+			.col-12.text-center: a(href='/showcase/').text-center.text-color.title-size 返回列表
+			hr

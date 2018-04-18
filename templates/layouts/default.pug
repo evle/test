@@ -1,0 +1,110 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title 众联云海
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    link(href="https://unpkg.com/js-offcanvas/dist/_css/prefixed/js-offcanvas.css", rel="stylesheet")
+    link(href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css")
+    link(rel="stylesheet", type="text/css", media="screen", href="/css/main.css")
+  body
+    aside#off-canvas
+      ul.mt-5
+        li.nav-li
+          a.rm-under(href="/") 首页
+        |             
+        li.nav-li
+          a.rm-under(href="/showcase") 项目案例
+        |             
+        li.nav-li
+          a.rm-under(href="/article") 资讯中心
+        |             
+        li.nav-li
+          a.rm-under(href="/about") 关于我们
+        |             
+        li.nav-li
+          a.rm-under(href="/contact") 联系我们
+    |     
+    .container-fluid
+      nav.navbar.sticky-top.bg-nav.justify-content-around.row
+        a#subnav.d-sm-none.rm-under.toggle-nav.rm-outline(href="#off-canvas", data-offcanvas-trigger="off-canvas") ☰
+        |             
+        a.rm-under.mix-brand(href="/")
+          img.mb-2.img-fluid(src="/img/logo.png", width="30px", height="30px", alt="众联云海")
+          |                 
+          span.logo.ml-3.pb-0 众联云海
+        |             
+        ul#my-menu.navbar.d-flex.hidden-sm.nav-h
+          li
+            a.active(href="/") 首页
+          |                 
+          li
+            a(href="/showcase") 项目案例
+          |                 
+          li
+            a(href="/article") 资讯中心
+          |                 
+          li.dropdown
+            a#dropdownMenuLink.dropdown-toggle(href="/about", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+              | 关于我们
+            |                     
+            .dropdown-menu.mt-fix.sub-nav(aria-labelledby="navbarDropdown")
+              a.dropdown-item.sub-link(href="/about") 关于我们
+              |                         
+              a.dropdown-item.sub-link(href="/contact") 联系我们
+      block content
+      footer.row.justify-content-center.align-items-center.pl-5
+        .col-sm-4.text-center
+          | Copyright Zonlinks 2016-2018. All rights reserved.
+        |             
+        .col-sm-4.text-center
+          | ICP备12018175-4
+    
+    script(src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js")    
+    script(src="/js/bootstrap.min.js")
+    script(src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js")
+    script(src="https://unpkg.com/js-offcanvas/dist/_js/js-offcanvas.pkgd.min.js")
+    |     
+    script.
+      $(function () {
+      // For switch tab in service section
+      jQuery('#myTab a').on('click', function (e) {
+      var currentAttrValue = jQuery(this).attr('href');
+      console.log(currentAttrValue)
+      // Show/Hide Tabs
+      jQuery(currentAttrValue).show().siblings().hide();
+      // Change/remove current tab to active
+      jQuery(this).children().first().addClass('active-shadow')
+      console.log(jQuery(this).siblings().children().removeClass('active-shadow'));
+      e.preventDefault();
+      });
+      // For off-canvas
+      $('#off-canvas').offcanvas();
+      $('#subnav').click(function () {
+      $('nav').removeClass('sticky-top');
+      })
+      $(document).on("close.offcanvas", function (e) {
+      $('nav').addClass('sticky-top');
+      });
+      $(document).trigger("enhance");
+      //- //- Animate 
+      //- var eTop = $(".showcase").offset().top;
+      //- var wTop = $(window).height();
+      //- window.onresize = function(){
+      //-   var wTop = $(window).height();
+      //- }
+      //- $(window).scroll(function(){
+      //-   var dTop = $(document).scrollTop();
+      //-   if(dTop+wTop-40 > eTop){
+      //-     $('.case1').addClass('fadeInUp');
+      //-     $('.case2').addClass('fadeInUp');
+      //-     $('.case3').addClass('fadeInUp');
+      //-     $('.case4').addClass('fadeInUp');
+      //-   }
+      //- })
+      
+      
+      });

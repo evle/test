@@ -1,0 +1,23 @@
+extends ../layouts/default
+
+block content
+	.row
+		hr
+		article.row.justify-content-center
+			header.col-12.text-center
+				h1.ti.title-color= data.post.title
+				span.title-color.text-size.mt-4 #{data.post._.publishedDate.format('YYYY-MM-DD')}  
+				if data.post.categories && data.post.categories.length
+					each cat, cat_i in data.post.categories
+						a(href='/article/' + cat.key).title-color.text-size.mb-4= cat.name
+						if cat_i < data.post.categories.length - 1
+							| 
+				
+				
+			main.col-12.txt.mb-5.main-wrap.mt-2
+				hr.mb-4
+				.mb-5.lh!= data.post.content.full
+				hr
+				.col-12.text-center: a(href='/article/').text-center.text-color.title-size.pt-5.mt-5 返回列表
+				hr
+			
